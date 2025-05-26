@@ -1,0 +1,265 @@
+compile in latex
+
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, geometry, graphicx}
+\geometry{a4paper, margin=1in}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Physics Assignment}
+\lhead{Class 11}
+\rfoot{Page \thepage}
+
+\title{\textbf{Physics assignment 1}}
+\author{Saad Moquim,saad22@iisertvm.ac.in}
+
+\date{}
+
+\begin{document}
+\begin{abstract}
+    This document in Vector algebra,elementary calculus,Motion in 1D and projectile motion.Reviewing basic integrals and differentials before would be very helpful.Any new information will be provided in the review section.
+    The problems are mostly conceptually challenging and wont involve very tedious calculation and its fine to not be able to solve them 1 go.The assignment is made to be solved over a span of 2-3 days.
+\end{abstract}
+\maketitle
+\section{review}
+\subsection*{Vector Notation}
+In 2D, a vector is written in terms of its components:
+\[
+\vec{A} = A_x \hat{i} + A_y \hat{j}
+\]
+Here, \( A_x \) and \( A_y \) are the horizontal and vertical components, and \( \hat{i} \) and \( \hat{j} \) are unit vectors along the x and y axes.
+
+The magnitude (or length) of \( \vec{A} \) is given by:
+\[
+|\vec{A}| = \sqrt{A_x^2 + A_y^2}
+\]
+
+The direction \( \theta \) of the vector from the x-axis is:
+\[
+\theta = \tan^{-1}\left(\frac{A_y}{A_x}\right)
+\]
+
+\subsection*{Vector Addition and Subtraction}
+If \( \vec{A} = A_x \hat{i} + A_y \hat{j} \) and \( \vec{B} = B_x \hat{i} + B_y \hat{j} \), then:
+\begin{align*}
+\vec{A} + \vec{B} &= (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
+\vec{A} - \vec{B} &= (A_x - B_x)\hat{i} + (A_y - B_y)\hat{j}
+\end{align*}
+
+Using vector subtraction, you can show that a vector connecting the origin and some point (a,b) in space is of the form:
+\begin{align*}
+\vec{A}  &= (a - 0)\hat{i} + (b - 0)\hat{j} =a\hat{i} + b\hat{j}
+\end{align*}
+
+
+\subsection*{Unit Vector}
+A \textbf{unit vector} has a magnitude of 1 and points in the direction of a given vector:
+\[
+\hat{A} = \frac{\vec{A}}{|\vec{A}|}
+\]
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{download.png}
+    \caption{a vector is constructed using the unit vectors i and j.Notice how you can either travel along the vector to reach the arrow at 3,2 or you can translate 3 units along $\hat{i}$ and then 2 units along $\hat{j}$ and will reach the same point nonetheless.These are equivalent ways of explaining your vector.}
+    \label{fig:enter-label}
+\end{figure}
+The unit vector along x direction is denoted by $\hat{i}$.For y,we have $\hat{j}$ and for z we have $\hat{k}$.These unit vectors "span" x,y and z axes individually and together,can be used to form any vector in a 3D space.To understand this more intuitively, use your room as a space and denote any one of the corners as your origin(i.e:this point is represented by 0,0,0).You will be able to see 3 distinct axes emerging from this point.Label these x,y,z as per your convenience.Now, try finding out the co-ordidnates of the other corners in the room by starting from the origin and moving around using i,j and k unit vectors.
+
+\subsection*{Dot Product}
+The \textbf{dot product} of two vectors is:
+\[
+\vec{A} \cdot \vec{B} = |\vec{A}| |\vec{B}| \cos\theta = A_x B_x + A_y B_y
+\]
+It gives a scalar and is useful for calculating quantities like work:
+\[
+W = \vec{F} \cdot \vec{d}
+\]
+
+\subsection*{Cross Product (2D) — Direction Only}
+In 2D, the cross product gives a scalar in the \( \hat{k} \) direction (out of the plane):
+\[
+\vec{A} \times \vec{B} = (A_x B_y - A_y B_x)\hat{k}
+\]
+
+\subsection*{Resolving a Vector into Components}
+If a vector \( \vec{R} \) has magnitude \( R \) and makes an angle \( \theta \) with the horizontal, then this vector can be resolved into its cartesian counterparts(with components along i,j and k):
+\[
+R_x = R \cos \theta \hat{i}, \quad R_y = R \sin \theta \hat{j}
+\]
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{vector_resolution_diagram.png}
+    \caption{resolving vector along x and y axes.You can easily motivate this yourself by using basic trigonometric ratios.Resolving of vectors in this manner is important in physics, an example is the case of projectile motion where we resolve the angled velocity.}
+    \label{fig:enter-label}
+\end{figure}
+\subsection*{Important Tip}
+Vectors follow the \textbf{parallelogram law} and the \textbf{triangle law} of addition. Always draw a diagram to help visualize the problem.Try resolving angled vectors to preferred coordinate systems.The intuition for what to do when will come with experience.
+
+
+\section*{1. Basic Derivatives}
+\begin{itemize}
+    \item The derivative tells you how fast something is changing.
+    \item If \( x(t) \) is position, then velocity is: 
+    \[
+    v(t) = \frac{dx}{dt}=\dot{x}
+    \]
+    \item If \( v(t) \) is velocity, then acceleration is: 
+    \[
+    a(t) = \frac{dv}{dt} = \frac{d^2x}{dt^2}=\ddot{x}
+    \]
+    note:you can write $ \frac{d^2x}{dt^2}$ as $\dot{x}\frac{\dot{x}}{x}$
+    
+\end{itemize}
+
+\section*{2. Basic Integrals}
+\begin{itemize}
+    \item Integration is the reverse of differentiation. It often gives you area or total amount.
+    \item If \( a(t) \) is acceleration, then velocity is:
+    \[
+    v(t) = \int a(t) \, dt
+    \]
+    \item If \( v(t) \) is velocity, then position is:
+    \[
+    x(t) = \int v(t) \, dt
+    \]
+    \item Common integrals:
+    \[
+    \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1), \quad \int \sin x \, dx = -\cos x, \quad \int \cos x \, dx = \sin x
+    \]
+    \item The constant \( C \) is called the constant of integration.
+\end{itemize}
+
+\section*{3. Area Under a Curve}
+\begin{itemize}
+    \item The definite integral gives the area under a curve:
+    \[
+    \text{Area} = \int_{a}^{b} f(x) \, dx
+    \]
+\end{itemize}
+
+\section*{4. Spherical Coordinates Integration}
+\begin{itemize}
+    \item In 3D problems with spherical symmetry (like gravity fields or electric fields), we use spherical coordinates:
+    \[
+    x = r \sin\theta \cos\phi, \quad y = r \sin\theta \sin\phi, \quad z = r \cos\theta
+    \]
+    \item Volume element in spherical coordinates is:
+    \[
+    dV = r^2 \sin\theta \, dr \, d\theta \, d\phi
+    \]
+    \item A triple integral in spherical coordinates:
+    \[
+    \int_{0}^{2\pi} \int_{0}^{\pi} \int_{0}^{R} f(r, \theta, \phi) \, r^2 \sin\theta \, dr \, d\theta \, d\phi
+    \]
+    \item Example: Volume of a sphere of radius \( R \):
+    \[
+    V = \int_{0}^{2\pi} \int_{0}^{\pi} \int_{0}^{R} r^2 \sin\theta \, dr \, d\theta \, d\phi = \frac{4}{3}\pi R^3
+    \]
+    this has been included as a problem later on,but try motivating the concept of taking the volume of a small shell(which is just the area of a shell multiplied by small thickness dr) and upon integrating that, you get the same result.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\section*{Vector Algebra}
+\subsection{Getting used to the notations with elementary problems}
+1.Write the following in vector forms:\\
+(a)Line joining (0,0) and (1,1)\\
+(b)Line joining (0,0) and (-1,-1)\\
+(c)Line joining (0,0) and (-1,1)\\
+(d)Line joining (0,0) and (1,-1)\\
+These problems are the same as joining 0,0 with the designated points using the shortest possible path and then this "path" becomes the vector.\\
+(\textit{hint:when going from 0,0 to any one of the point,remember that you can do the same by moving along the x and y axis individually.Using this information and the discussion on $\hat{i}$ and $\hat{j}$})\\
+
+2.Find the length of all the 4 vectors and hence conclude that having the same length does not make the vectors equal.Draw the vectors in cartesian plane and further solidify your claim.\\
+
+3.Write the following in vector forms:\\
+(a)A ray of length 5 at inclination of 37 degrees to the x axis.\\
+(b)A ray of length 2 at inclination of 45 degrees to the x axis.\\
+(c)A ray of length 3 at inclination 60 degrees to the y axis.\\
+Draw labelled diagrams for all.\\
+
+4.Let two vectors,A and B have the following values:
+\[
+\vec{A} = 5\hat{i} + 2\hat{j}, \quad \vec{B} = -3\hat{i} + 4\hat{j}
+\]
+(a) Find \( \vec{A} + \vec{B} \) \\
+(b) Find the magnitude of the resultant vector. \\
+(c) Find the angle it makes with the x-axis.\\
+
+\subsection{vector algebra in physics}
+5.A force vector \( \vec{F} = 10\hat{i} + 6\hat{j} \, (\text{N}) \) is applied to move an object through a displacement \( \vec{d} = 3\hat{i} \, (\text{m}) \). \\
+(a) Calculate the work done by the force. \\
+(b) What component of the force contributes to the work?\\
+
+6.A boat moves with velocity \( \vec{v}_\text{boat} = 4\hat{i} \, \text{m/s} \) relative to still water. The river flows with velocity \( \vec{v}_\text{river} = 3\hat{j} \, \text{m/s} \). \\
+(a) Find the velocity of the boat relative to the ground. \\
+(b) What is the magnitude and direction of the resultant velocity?\\
+
+7.A man walks north with a speed of \( 5 \, \text{km/h} \). He feels that rain is falling vertically on him. Later, he walks east at the same speed and feels that the rain is falling at \( 45^\circ \) from the vertical, towards the west. \\
+Find the actual velocity of the rain (magnitude and direction with respect to the ground).\\
+
+8.A man is running with a speed of \( 6 \, \text{m/s} \) towards the east. He feels the rain is falling vertically downward. If the rain's velocity relative to the ground is directed at \( 30^\circ \) to the vertical, find the speed of the rain.
+
+
+\vspace{0.5cm}
+
+\section*{Basic Calculus in Physics}
+\subsection{Using integration to find areas and volumes}
+1.Using the cues given in the review,evaluate the area of a square sheet of unit length.\\
+\textit{hint:draw a square in the cartesian plane with corners at (0,0),(1,0),(1,1),(0,1) then find a suitable infinitesimal element to integrate over.}\\
+
+2.Again, using the cues:find the expression for the well known value of the volume of a solid sphere.\\
+\textit{hint:in the spherical polar plane,take a spherical shell at some radius small r<R,find the volume element for the same and integrate over appropriate limits}
+
+\subsection{Calculus in kinematics}
+1.Two buses P and Q start from the a point at the same time and their positions are represented by\\ $X_p(t)=\alpha.t+\beta.t^2$ and $X_q(t)=f.t-t^2$.\\
+Find the time at which both buses have the same velocity.(JEE mains 2022 june)\\
+
+2.For a harmonic osillator,the equation of motion is given by $\ddot{x}=-\omega^2x$.Find a relation between the velocity and position for the osillator system.\\
+(\textit{hint:treat $\ddot{x}$ like a fraction and try breaking it in terms of $\dot{x}$ and x and all that should remain after is a very simple indefinite integral.})\\
+
+3.A particle is moving with speed $v = b\sqrt{x}$ along positive x-axis. Calculate the speed of the particle at time t = tau (assume that the particle is at origin at t = 0)(JEE mains 2019)
+
+4.Given:
+\[
+a(t) = 12t^2, \quad v(0) = 3 \, \text{m/s}, \quad x(0) = 0
+\]
+Find the velocity and position functions of the particle.\\
+
+5.A particle moves with an acceleration given by:
+\[
+a(t) = 6t - 4
+\]
+If the initial velocity is \( v(0) = 2 \, \text{m/s} \) and initial position is \( x(0) = 1 \, \text{m} \), find expressions for \( v(t) \) and \( x(t) \).\\
+
+6.A ball is thrown vertically upward with an initial velocity of \( v_0 = 20 \, \text{m/s} \). Assume upward is positive and use \( g = 9.8 \, \text{m/s}^2 \).\\
+(a) Find the velocity function \( v(t) \). \\
+(b) Find the height function \( h(t) \), assuming it starts from ground level.\\
+(c) Find the maximum height reached by the ball.
+
+note:this problem can be solved using basic equations of motion for constant acceleration as well.Solve it with that method first to know what should the expected expressions be.Then using calculus would be easier because you already know what result you are supposed to arrive at.
+
+\section*{Section 4: Derivation of the Equation of Projectile Motion}
+\subsection{suggested readings:}
+
+\href{https://www.maplesoft.com/content/EngineeringFundamentals/1/MapleDocument_1/Projectile%20Motion.pdf}{Maplesoft engineering fundamentals}
+
+\href{https://unacademy.com/content/wp-content/uploads/sites/2/2022/10/Projectile-Motion_Process_Final.pdf}{Unacademy notes on projectile motions.Contains solved problems for further reference.}
+
+\subsection{suggested watching:}
+\href{https://www.youtube.com/watch?v=uEnUG_1TYxc&ab_channel=Sabins}{Cute video by sabins on projectile motion.}
+
+\subsection{Problems}
+1.Repeat the derivation but instead take an inclination $\theta$ to the y-axis and solve for the different form of the equation.Find the equation of curve,range of particle and time taken.\\
+
+2.Find out the angle required to maximise your range of the thrown projectile.Argue heuristically first(use logic and see at what angle the range can be maximum) and then use the concept of derivatives to maximise the function with respect to the angle.
+\end{document}
