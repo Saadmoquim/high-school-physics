@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx} 
+\begin{document}
+
+\section*{Newtonian mechanics practice poblms}
+
+\subsection*{kinemtics of a body on an incline}
+A small block slides without friction down an inclined plane starting from rest. Let $s_n$ be the distance travelled from $t = n-1$ to $t = n$. Then, $\dfrac{s_n}{s_{n+1}}$ is
+\begin{enumerate}
+    \item $\dfrac{2n-1}{2n}$
+    \item $\dfrac{2n+1}{2n-1}$
+    \item $\dfrac{2n-1}{2n+1}$
+    \item $\dfrac{2n}{2n+1}$
+\end{enumerate}
+
+A body of mass 'm' is launched up on a rough
+inclined plane making an angle of 30° with the
+horizontal. The coefficient of friction between the
+body and plane is $\frac{\sqrt{x}}{5}$ if the time of ascent is half
+of the time of descent. The value of x is ?. 
+
+\subsection*{calculus application}
+Q1)The position vector $\boldsymbol{r}$ of a particle of mass $m$ is given by
+\[
+\boldsymbol{r}(t) = \alpha t^3 \boldsymbol{\hat i} + \beta t^2 \boldsymbol{\hat j}
+\]
+where $\alpha = \dfrac{10}{3} \, \text{ms}^{-3}$, $\beta = 5 \, \text{ms}^{-2}$ and $m = 0.1\, \text{kg}$. At $t = 1\, s$, which of the following statement(s) is (are) true about the particle?(jee adv PYQ)
+\begin{enumerate}
+    \item The velocity $\boldsymbol{v}$ is given by $\boldsymbol{v} = (10 \boldsymbol{\hat i} + 10 \boldsymbol{\hat j})\, \text{ms}^{-1}$.
+    \item The angular momentum $\boldsymbol{L}$ with respect to the origin is $\boldsymbol{L} = \dfrac{5}{3} \boldsymbol{\hat k}\, \text{Nms}$.
+    \item The force $\boldsymbol{F}$ is given by $\boldsymbol{F} = (\boldsymbol{\hat i} + 2 \boldsymbol{\hat j})\, \text{N}$.
+    \item The torque $\boldsymbol{\tau}$ with respect to the origin is $\boldsymbol{\tau} = -\dfrac{20}{3} \boldsymbol{\hat k} \, \text{Nm}$.
+\end{enumerate}
+
+Q2)A particle of mass M originally at rest is
+subjected to a force whose direction is constant
+but magnitude varies with time according to the
+relation\\
+\begin{equation}
+    F=F_0[1-(\frac{t-T}{T})^2]
+\end{equation}
+Where $F_0$ and T are constants. The force acts
+only for the time interval 2T. The velocity v of
+the particle after time 2T is (JEE mains):\\
+(1) 2$F_0$T / M\\
+(2) 4$F_0$T / 2M\\
+(3) 4$F_0$T / 3M \\
+(4) $F_0$T / 3M\\
+
+\subsection*{Atwood system}
+
+The pulleys and strings shown in the figure 1 are smooth and of negligible mass. For the system to remain in equilibrium, the angle $\theta$ should be
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\linewidth]{download (1).png}
+    \caption{atwood system}
+    \label{fig:enter-label}
+\end{figure}
+\begin{enumerate}
+    \item $0°$
+    \item $30°$
+    \item $45°$
+    \item $60°$
+\end{enumerate}
+
+\subsection*{Friction}
+Q1)A block kept on a rough inclined plane as shown in the figure 2,\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{fe1fd5c54d95f5972c1d278fa0394ff6-q-1.jpg}
+    \caption{diagram}
+    \label{fig:enter-label}
+\end{figure}
+remains at rest up to a maximum force of $2\,N$ down the inclined plane. The maximum external force $2\,N$ is needed such that the block does not move up the inclined plane. The coefficient of static friction between the block and the inclined plane is
+\begin{enumerate}
+    \item $\dfrac{2}{3}$
+    \item $\dfrac{\sqrt{3}}{2}$
+    \item $\dfrac{\sqrt{3}}{4}$
+    \item $\dfrac{1}{2}$
+\end{enumerate}
+
+Q2)The coefficient of static friction between a
+wooden block of mass 0.5 kg and a vertical
+rough wall is 0.2. The magnitude of horizontal
+force that should be applied on the block to
+keep it adhere to the wall will be ?N.
+[g = 10 ms–2] \\
+
+Q3)The coefficient of static friction between two
+blocks is 0.5 and the table is smooth(fig 3). The
+maximum horizontal force that can be applied
+to move the blocks together is .......N.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{hlowgad9neq2-q.png}
+    \caption{diagram}
+    \label{fig:enter-label}
+\end{figure}
+
+\end{document}
