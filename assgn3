@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, graphicx, hyperref}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{physics}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{MnSymbol,wasysym}
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\lstdefinestyle{python}{
+  backgroundcolor=\color{codebg},
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{orange},
+  commentstyle=\color{gray}\itshape,
+  showstringspaces=false,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+\title{Problems in application of Calculus in Mechanics}
+\author{Saad Moquim IMS22221 \\ School of Physics, IISER-Thiruvananthapuram \\ \texttt{saad22@iisertvm.ac.in}}
+\begin{document}
+
+
+\subsection*{JEE PYQs}
+You may have already seen these questions before, but nonetheless repeated practice is good. \smiley{}
+\begin{enumerate}
+  \item (JEE Main 2024) A particle starts from rest and velocity varies as \(v = 4\sqrt{x}\). Find its acceleration.
+  \item (JEE Main 2020) Given \(x^2 = at^2 + 2bt + c\), acceleration depends on \(x\) as \(x^{-n}\). Determine integer \(n\).
+  \item (JEE Main 2019) Position \(x(t)=at + bt^2 - ct^3\). At zero acceleration, find velocity.
+  \item (JEE Main 2021) Velocity \(v=\alpha t + \beta t^2\). Compute displacement between \(t=1\) s and \(t=2\) s.
+  \item (JEE Main 2021) Force as a function of time is \(F(t)=F_0\left[1-\left(\frac{t-T}{T}\right)^2\right]\) acts for \(2T\). Find velocity after \(2T\).(also given in a previous assignment)
+
+  \item (JEE Advanced 2022) For \(\mathbf{F}=-k(x\mathbf{i}+y\mathbf{j}),\; k=1,\; \text{at }z=0.5\), compute \((xv_y - yv_x)\).
+
+  \item (JEE Main 2021) Velocity is related to time as \(v=\alpha t+\beta t^2\). Derive displacement via integration.
+  \item (JEE Main 2021) Particle on horizontal surface has a retarding force \(F=-kx\). Find exit speed after patch of length L assuming intial speed was $v_i$
+\end{enumerate}
+
+\subsection*{Additional questions}
+\begin{enumerate}
+  \setcounter{enumi}{10}
+  \item A particle under \(F(x)=kx^2\) starts from rest at \(x=0\). Find \(v(x)\).
+  \item Acceleration \(a=-\alpha v^2\), with \(v(0)=v_0\). Derive \(v(t)\).
+  \item Position \(x(t)=A\sin(\omega t)\). Find force on mass \(m\).(this concept comes later in waves and oscillations)
+  \item Body thrown with drag force \(F_d \propto v\). Derive terminal velocity and \(v(t)\).(this will be discussed further in fluid mechanics where you learn the stoke's law for a spherical body)
+  \item \(x(t)=at^3 - bt^2\). Find acceleration as function of \(x\).
+  \item Variable mass problem:in a system,the mass changes with velocity as \(\frac{dm}{dt}=b v\). Derive velocity vs time.(to convince yourself that this is possible, think of a train with a compartment carrying sand, which on increment in velocity results in sand falling out and the net mass decreasing)
+  \item Given \(U(x)=Ax^4\), find force \(F(x)\), and if total energy is \(E\), find speed as function of \(x\).
+  \item Projectile with \(a(v)=-kv\). Solve for \(v(t)\).
+  \item Friction \(F(x)=\mu mg e^{-x/L}\). Compute work from 0 to \(L\).(as mentioned in a previous assignment,work done is simply $W=\int_{x_i}^{x_f} F.dx$ where $x_i$ and $x_f$ are intial and final positions.)
+  \item Force \(F(t)=F_0 e^{-kt}\) on mass \(m\), starting from rest—find \(v(t)\).(use the integral relation for exponential function,$e^xdx=e^x$
+\end{enumerate}
+
+\end{document}
+
